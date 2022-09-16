@@ -1,2 +1,37 @@
-# Andriy-Codes
-Hello, I'm glad you came to see me. Here I share my C++ learning!
+
+Прості множники
+На вході програми маємо натуральне число n (n>1). Потрібно розкласти його на прості множники.
+
+Вхідні дані:
+Натуральне число n (1 < n < 231).
+
+Вихідні дані:
+В порядку зростання прості множники числа n в стовпчик.
+
+Вхідні дані #1 
+60
+Вихідні дані #1 
+2
+2
+3
+5
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+  int n, div = 2;
+  cout << "n = ";
+  cin >> n;
+  while (n > 1 && n < 2147483648)
+  {
+    while (n % div == 0)
+    {
+      cout << "\n" << div;
+      n = n / div;
+    }
+    div++;
+  }
+  return 0;
+}
